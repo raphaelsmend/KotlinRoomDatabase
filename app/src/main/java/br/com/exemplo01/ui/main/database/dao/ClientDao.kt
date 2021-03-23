@@ -5,14 +5,13 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import java.util.List;
-
-import br.com.exemplo01.ui.main.database.entities.Client;
+import br.com.exemplo01.ui.main.database.entity.Client;
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ClientDao {
     @Query("SELECT * FROM client")
-    fun getAll(): List<Client>
+    fun getAll(): Flow<List<Client>>
 
     @Query("SELECT * FROM client WHERE nome LIKE :nome AND LIMIT 1")
     fun findByName(nome: String): Client

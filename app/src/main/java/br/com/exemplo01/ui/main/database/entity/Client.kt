@@ -1,4 +1,4 @@
-package br.com.exemplo01.ui.main.database.entities;
+package br.com.exemplo01.ui.main.database.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
